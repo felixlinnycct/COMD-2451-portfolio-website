@@ -1,5 +1,53 @@
+.navbar {
+  padding: 50px;
+  background: #2759E6;
+}
 
-        header h1, header a, div h1 {
+ul {
+  top: 0;
+  width: 100%;
+}
+
+.header {
+  padding: 150px;
+  text-align: center;
+  background: #2759E6;
+  opacity: 80%;
+  color: white;
+  font-size: 30px;
+}
+
+div h1 {
+  font-size: 80px;
+  font-family: "scotch-deck-compressed", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: white; }
+
+.responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+.button{
+  padding: 10px 28px;
+  border-radius: 20px;
+  border: 2px solid #2759E6 ;
+  background-color: #2759E6 ;
+  color:white;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: white;
+  color: #2759E6;
+  border: 2px solid #2759E6 ;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+header a {
+        font-size: 40px;
         font-family: "scotch-deck-compressed", sans-serif;
         font-weight: 600;
         font-style: normal;
@@ -36,17 +84,15 @@
         article img {
         max-width: 100%;
         height:auto;}
-
-        nav, #feature, footer {
-        margin: 1%; }
-
+      
+ 
         nav li {
         font-family: "stolzl", sans-serif;
         font-weight: 400;
         font-style: normal;
         text-align: center;
         display: inline;
-		padding: 0.5em;
+		    padding: 0.5em;
         color: white;}
 
         * {
@@ -61,14 +107,22 @@
         font-family: "stolzl", sans-serif;
         font-weight: 400;
         font-style: normal;}
-
-        footer p {    
+ 
+        /* footer */
+        .button, footer p {    
         font-family: "stolzl", sans-serif;
         font-weight: 400;
         font-style: normal;
         color: white;}
 
-
+        .footer {
+          padding: 50px;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          background-color: #2759E6;
+          text-align: center;
+       }
 
         
 /* contact form styles*/
@@ -86,7 +140,7 @@
     color: #212529;
     text-align: left;
     background-color: #fff;
-    padding: 30px;
+    padding: 30px 150px;
     padding-bottom: 10px;
     border: 1px solid #ced4da;
     border-radius: 0.25rem;
@@ -126,7 +180,7 @@
 }
 
 .fcf-form-control:focus {
-    border: 1px solid #313131;
+    border: 2px solid #2759E6;
 }
 
 select.fcf-form-control[size], select.fcf-form-control[multiple] {
@@ -186,7 +240,7 @@ label.fcf-label {
 }
 
 .fcf-btn:hover {
-    color: #212529;
+    color: #2759E6;
     text-decoration: none;
 }
 
@@ -198,13 +252,14 @@ label.fcf-label {
 .fcf-btn-primary {
     color: #fff;
     background-color: #2759E6;
-    border-color: #2759E6;
+    border: 2px solid #2759E6 ;
 }
 
 .fcf-btn-primary:hover {
-    color: #fff;
-    background-color: #0069d9;
-    border-color: #0062cc;
+    color: #2759E6;
+    background-color: white;
+    border: 2px solid #2759E6 ;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 .fcf-btn-primary:focus, .fcf-btn-primary.focus {
@@ -218,7 +273,7 @@ label.fcf-label {
     padding: 0.5rem 1rem;
     font-size: 1.25rem;
     line-height: 1.5;
-    border-radius: 0.3rem;
+    border-radius: 20px;
 }
 
 .fcf-btn-block {
@@ -283,7 +338,7 @@ input[type="submit"].fcf-btn-block, input[type="reset"].fcf-btn-block, input[typ
   }
   
   .nav-link:hover{
-    color: dodgerblue;
+    color: yellow;
   }
   
   .hamburger{
@@ -319,7 +374,7 @@ input[type="submit"].fcf-btn-block, input[type="reset"].fcf-btn-block, input[typ
     .nav-menu{
       position: fixed;
       left: -100%;
-      top: 70px;
+      top: 80px;
       gap: 0;
       flex-direction: column;
       background-color: #2759E6;
@@ -336,4 +391,212 @@ input[type="submit"].fcf-btn-block, input[type="reset"].fcf-btn-block, input[typ
       left: 0;
     }
   }
-  
+
+/* modal  */
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 150px; 
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: white;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #2759E6;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close {
+  color: #2759E6;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Modal Body */
+.modal-body {padding: 2px 16px;}
+
+/* Modal Footer */
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #2759E6;
+  color: white;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@keyframes animatetop {
+  from {top: -300px; opacity: 0}
+  to {top: 0; opacity: 1}
+}
+
+
+
+/* lightbox */
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Create four equal columns that floats next to eachother */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1oopx;
+}
+
+/* The Close Button */
+.close {
+  color: #2759E6;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color:black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Hide the slides by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Caption text */
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+img.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.demo:hover{
+  transform: scale(1.05);
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

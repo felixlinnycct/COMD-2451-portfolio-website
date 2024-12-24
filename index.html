@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>felix's home page</title>
+        <title>FELIX LIN - HOME</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -10,19 +10,31 @@
         <link rel="stylesheet" href="https://use.typekit.net/foa0ydt.css">
         <link rel="stylesheet" href="https://use.typekit.net/foa0ydt.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            body {
+              background-image: url("assets/background.png");
+              background-repeat: no-repeat;
+              background-attachment: fixed;  
+              background-size: cover;}
+              
+        </style>
     </head>
 
     <body>
         <header >
             <div class="container"> 
                 <nav class="navbar">
-                  <a href="index.html" class="nav-branding">Felix Lin's Portfolio</a>
+                <img src="assets/LOGO.jpg" class="w3-circle" alt="LOGO" style="width:10%">
+                  <a href="index.html" class="nav-branding">Felix Lin</a>
                   <ul class="nav-menu">
                     <li class="nav-item">
                         <a href="index.html" class="nav-link">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a href="about.html" class="nav-link">ABOUT ME</a>
+                        <a href="about.html" class="nav-link">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="gallery.html" class="nav-link">GALLERY</a>
                     </li>
                     <li class="nav-item">
                         <a href="resume.html" class="nav-link">RESUME</a>
@@ -42,46 +54,115 @@
 
         <div>
 
-            <div class="w3-container">
-                <h2>Home</h2>
+        <div class="header">
+            <h1> Hi! I'm Felix <br>
+                I'm A Designer</h1>
+        </div>
+
+        <div class="w3-container">
+
+            <div class="w3-row-padding" style="margin:20px 50px">
+              <div class="w3-col l3">
+                <img src="assets/concert_print_ad-72dpi.jpg" style="width:100%;cursor:pointer"
+                onclick="openModal();currentDiv(1)" class="w3-hover-shadow">
+              </div>
+              <div class="w3-col l3">
+                <img src="assets/growth_mindset_poster-72dpi.jpg" style="width:100%;cursor:pointer"
+                onclick="openModal();currentDiv(2)" class="w3-hover-shadow">
+              </div>
+              <div class="w3-col l3">
+                <img src="assets/new_year_poster-72dpi.jpg" style="width:100%;cursor:pointer"
+                onclick="openModal();currentDiv(3)" class="w3-hover-shadow">
+              </div>
+              <div class="w3-col l3">
+                <img src="assets/transparency_poster-72dpi.jpg" style="width:100%;cursor:pointer"
+                onclick="openModal();currentDiv(3)" class="w3-hover-shadow">
+              </div>
             </div>
-
-            <section class="w3-row-padding row-color-1">
-                <section class="w3-row-padding row-color-1"></section>
-                <article class="w3-col s12 m4 l4">
-                    <h3>Layers & Transparency Poster</h3>
-                    <p><img src="assets/transparency_poster-72dpi.jpg" alt="Layer & Transparency poster"></p>
-                </article>
-                <article class="w3-col s12 m4 l4">
-                    <h3>New Years Poster</h3>
-                    <p><img src="assets/new_year_poster-72dpi.jpg" alt="new years poster"></p>
-                </article>
-                <article class="w3-col s12 m4 l4">
-                    <h3>Concert Print Ad</h3>
-                    <p><img src="assets/concert_print_ad-72dpi.jpg" alt="concert print ad"></p>
-                </article>
-                <section class="w3-row-padding row-color-1"></section>
-                <section class="w3-row-padding row-color-1"></section>
-                <article class="w3-col s12 m3 l4">
-                    <h3>Type Poster</h3>
-                    <p><img src="assets/type_poster-72dpi.jpg" alt="type poster"></p>
-                </article>
-                <article class="w3-col s12 m3 l4">
-                    <h3>Website Wireframe</h3>
-                    <p><img src="assets/website_wireframe-72dpi.jpg" alt="website wireframe"></p>
-                </article>
-                <article class="w3-col s12 m3 l4">
-                    <h3>Growth Mindset Poster</h3>
-                    <p><img src="assets/growth_mindset_poster-72dpi.jpg" alt="Growth Mindset Poster"></p>
-                </article>
-                <section class="w3-row-padding row-color-1"></section>
-            </section>
-
             
-            <footer class="w3-container w3-win8-cobalt w3-center w3-margin-top ">
+            <div id="myModal" class="w3-modal w3-black">
+             <span class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright" onclick="closeModal()" style="cursor:pointer">×</span>
+             <div class="w3-modal-content">
+            
+              <div class="w3-content" style="max-width:550px">
+                <img class="mySlides" src="assets/concert_print_ad-72dpi.jpg" style="width:100%">
+                <img class="mySlides" src="assets/growth_mindset_poster-72dpi.jpg" style="width:100%">
+                <img class="mySlides" src="assets/new_year_poster-300dpi.jpg" style="width:100%">
+                <img class="mySlides" src="assets/transparency_poster-72dpi.jpg" style="width:100%">
+                <div class="w3-row w3-black w3-center">
+                  <div class="w3-display-container w3-margin">
+                    <p id="caption"></p>
+                    <span class="w3-display-left w3-btn" onclick="plusDivs(-1)">❮</span>
+                    <span class="w3-display-right w3-btn" onclick="plusDivs(1)">❯</span>
+                  </div>
+                    <div class="w3-col s3">
+                      <img class="demo w3-opacity w3-hover-opacity-off" src="assets/concert_print_ad-thumbnail.jpg" style="width:100%" onclick="currentDiv(1)" alt="Beabadoobee Concert Print Ad">
+                    </div>
+                    <div class="w3-col s3">
+                      <img class="demo w3-opacity w3-hover-opacity-off" src="assets/growth_mindset_poster-thumbnail.jpg" style="width:100%" onclick="currentDiv(2)" alt="Growth Mindset Poster">
+                    </div>
+                    <div class="w3-col s3">
+                      <img class="demo w3-opacity w3-hover-opacity-off" src="assets/new_year_poster-thumbnail.jpg" style="width:100%" onclick="currentDiv(3)" alt="New Years Eve Poster">
+                    </div>
+                    <div class="w3-col s3">
+                      <img class="demo w3-opacity w3-hover-opacity-off" src="assets/transparency_poster-thumbnail.jpg" style="width:100%" onclick="currentDiv(4)" alt="Layers & Transparency Poster">
+                    </div>
+                </div> <!-- End row -->
+              </div> <!-- End w3-content -->
+              
+             </div> <!-- End modal content -->
+            </div> <!-- End modal -->
+            
+        </div>
+            
+            <script>
+            function openModal() {
+              document.getElementById('myModal').style.display = "block";
+            }
+            
+            function closeModal() {
+              document.getElementById('myModal').style.display = "none";
+            }
+            
+            var slideIndex = 1;
+            showDivs(slideIndex);
+            
+            function plusDivs(n) {
+              showDivs(slideIndex += n);
+            }
+            
+            function currentDiv(n) {
+              showDivs(slideIndex = n);
+            }
+            
+            function showDivs(n) {
+              var i;
+              var x = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("demo");
+              var captionText = document.getElementById("caption");
+              if (n > x.length) {slideIndex = 1}
+              if (n < 1) {slideIndex = x.length}
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+              }
+              x[slideIndex-1].style.display = "block";
+              dots[slideIndex-1].className += " w3-opacity-off";
+              captionText.innerHTML = dots[slideIndex-1].alt;
+            }
+            </script>
+
+            <div class="w3-center w3-margin">
+              <a href="gallery.html"><button class="button" alt="gallery button">Check Out More Work</button></a>
+            </div>
+            
+            <footer class="footer">
                     <p> Find me on social media.</p>
-                    <i class="fa fa-instagram w3-hover-opacity w3-text-white"></i>
-                    <i class="fa fa-linkedin w3-hover-opacity w3-text-white"></i>
+                    <a href="mailto:felixlinwork@gmail.com" target="_blank" class="fa fa-solid fa-envelope w3-hover-opacity w3-text-white"></a>
+                    <a href="https://instagram.com" target="_blank" class="fa fa-instagram w3-hover-opacity w3-text-white"></a>
+                    <a href="https://www.linkedin.com/in/felixllin/" target="_blank" class="fa fa-linkedin w3-hover-opacity w3-text-white"></a>
                     <p> Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
                     <p>&copy; 2024 Felix Lin</p>
             </footer>
